@@ -128,7 +128,7 @@ before_filter "save_my_previous_url", only: [:show]
    @recipe.user = user
    @recipe.save
    @cuisine_list = ["Western", "Indian", "Malay","Chinese"]
-   @category_list = ["vegetables", "condiments", "dairy and eggs","grains"]
+   @category_list = ["meat", "seafood", "vegetables", "condiments", "dairy and eggs","grains"]
 
    # recipe_cost variable to store cost of ingredient * qty
    # save to recipe_ing table only if new recipe saved successfully
@@ -171,9 +171,9 @@ before_filter "save_my_previous_url", only: [:show]
   end
 
   def destroy
+    RecipeIngredient.where(recipe_id: params[:id]).destroy_all
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    RecipeIngredient.where(recipe_id: params[:id]).destroy_all
     redirect_to recipes_path
   end
 
