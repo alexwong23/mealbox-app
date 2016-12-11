@@ -1,0 +1,22 @@
+{
+  "name": "mealbox-app",
+  "version": "1.0.0",
+  "description": "Heroku link: (https://mealbox.herokuapp.com/)",
+  "main": "Code-Highlights.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexwong23/mealbox-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexwong23/mealbox-app/issues"
+  },
+  "homepage": "https://github.com/alexwong23/mealbox-app#readme"
+}
