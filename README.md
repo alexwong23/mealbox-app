@@ -1,7 +1,7 @@
 # MealBox
 Heroku link: (https://mealbox.herokuapp.com/)
 
-Link to code highlights: (https://github.com/kelvintyb/mealbox-app/blob/master/Code-Highlights.js)
+Link to code highlights: (https://github.com/alexwong23/mealbox-app/blob/master/Code-Highlights.js)
 
 E-commerce app for grocery packages tailored to recipes, catering to home cooks that just want to cook and have minimal clean up / food wastage.
 
@@ -30,13 +30,13 @@ User C is just starting out cooking and is unsure of the steps that are needed a
 
 Entity Relationship Diagram:
 
-![ERD](https://github.com/kelvintyb/mealbox-app/blob/master/wdi6_presentation/ERD.jpg)
+![ERD](https://github.com/alexwong23/mealbox-app/blob/master/wdi6_presentation/ERD.jpg)
 
 User Flow Diagram:
 
-![User Flow Diagram](https://github.com/kelvintyb/mealbox-app/blob/master/wdi6_presentation/user_flow_diagram.jpg)
+![User Flow Diagram](https://github.com/alexwong23/mealbox-app/blob/master/wdi6_presentation/user_flow_diagram.jpg)
 
-![Nutritonix Integration Diagram](https://github.com/kelvintyb/mealbox-app/blob/master/wdi6_presentation/nutritonix_api_integration.jpg)
+![Nutritonix Integration Diagram](https://github.com/alexwong23/mealbox-app/blob/master/wdi6_presentation/nutritonix_api_integration.jpg)
 
 ## What code was used?
 
@@ -63,4 +63,26 @@ For full list of Dependencies, refer to the Gemfile.
 
 ## Credits
 
-Many thanks go to our wonderful instructors & coursemates from General Assembly Singapore for their help and support.  
+Many thanks go to our wonderful instructors & coursemates from General Assembly Singapore for their help and support.
+
+## How to deploy to heroku
+1. git fork the repo into your own github
+2. git clone it into your directory
+3. git checkout heroku
+4. heroku create [insert name of yr heroku app]
+5. git push heroku heroku:master **
+6. heroku run rake db:migrate
+7. heroku run rake db:seed
+
+At this point yr separate app should be good to go.
+
+If you nd to reset the postgres db that heroku uses in production:
+`heroku pg:reset DATABASE_URL --confirm [your app name]`
+
+To see more info on the heroku postgres db of yr app:
+`heroku pg:info`
+
+**NOTE: this step is different from yr typical git push heroku master, because we are pushing yr local heroku branch to your heroku’s host master branch
+
+[10:42]  
+did the deployment based off this https://glencbz.gitbooks.io/wdi-6-reference/content/unit-3/rails/deployment.html
