@@ -50,7 +50,6 @@ Refer to Code-Highlights.js for the key code blocks that runs our features.
 ## Known Bugs
 1. If transaction is updated wrongly, it goes back to transactions/:id when it's supposed to go back to transactions/:id/edit
 2. Devise-related: Signing up new user with existing email address comes up with an incomplete error message
-3. As database schema was largely conceived in development phase with sqlite, deletion of recipes does not proceed as expected in production since the native Heroku db (postgresql) is stricter with its foreign_key constraint on the transitive table.
 
 ## What was used?
 
